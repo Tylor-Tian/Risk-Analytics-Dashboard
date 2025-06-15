@@ -4,13 +4,22 @@ This repository contains a skeleton implementation of the Risk Analytics Dashboa
 
 ## Backend
 
-The backend is built with **FastAPI**. To run the API locally:
+The backend is built with **FastAPI** and uses Pydantic settings for
+configuration. Copy `.env.example` to `.env` and adjust if needed. To run
+the API locally:
 
 ```bash
 cd backend
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
+```
+
+Run the test suite with:
+
+```bash
+cd backend
+pytest
 ```
 
 The API exposes simple endpoints under `/risk`, `/metrics`, and `/alerts`.
