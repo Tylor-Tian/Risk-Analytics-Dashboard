@@ -32,12 +32,10 @@ class RiskLevel(str, Enum):
     critical = "critical"
 
 
-
 class AlertSeverity(str, Enum):
     info = "info"
     warning = "warning"
     critical = "critical"
-
 
 
 class RiskSnapshot(BaseModel):
