@@ -23,5 +23,10 @@ module.exports = {
       directory: path.join(__dirname, 'public'),
     },
     port: 3000,
+    proxy: {
+      '/risk': 'http://localhost:8000',
+      '/metrics': 'http://localhost:8000',
+      '/alerts': 'http://localhost:8000',
+    },
   },
 };

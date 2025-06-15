@@ -38,3 +38,13 @@ Key data structures are represented in `backend/app/models.py`.
 
 ## Running Locally
 Follow the instructions in the project README to start the backend. The frontend folder contains a placeholder for future development.
+
+## Sample API Usage
+
+The `risk` router exposes example endpoints backed by sample data. An indicator's risk level can be computed by sending a request like:
+
+```
+GET /risk/indicators/{id}/score?value=42
+```
+
+The `metrics` router provides a simple overview of loaded indicators, while the `alert` router demonstrates how alerts might be generated when values exceed defined thresholds.

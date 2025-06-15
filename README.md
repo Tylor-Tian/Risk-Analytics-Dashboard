@@ -22,3 +22,12 @@ The frontend folder contains the starting point for a React application using Ty
 ## Documentation
 
 See `docs/architecture.md` for the detailed architecture and design notes.
+
+### Example Requests
+
+With the server running you can list indicators or compute a score:
+
+```
+curl http://localhost:8000/risk/indicators
+curl "http://localhost:8000/risk/indicators/11111111-1111-1111-1111-111111111111/score?value=98"
+```
