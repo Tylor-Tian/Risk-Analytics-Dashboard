@@ -1,6 +1,7 @@
 from typing import List
 from ..models import RiskIndicator
 
+
 # Temporary in-memory data store
 _fake_indicators: List[RiskIndicator] = []
 
