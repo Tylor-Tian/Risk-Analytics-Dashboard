@@ -4,11 +4,13 @@ from uuid import UUID
 from datetime import datetime, timedelta
 from pydantic import BaseModel
 
+
 class Thresholds(BaseModel):
     low: float
     medium: float
     high: float
     critical: float
+
 
 class RiskIndicator(BaseModel):
     id: UUID
@@ -22,6 +24,7 @@ class RiskIndicator(BaseModel):
     update_frequency: timedelta
     owner: str
 
+
 class RiskLevel(str, Enum):
     low = "low"
     medium = "medium"
@@ -29,10 +32,12 @@ class RiskLevel(str, Enum):
     critical = "critical"
 
 
+
 class AlertSeverity(str, Enum):
     info = "info"
     warning = "warning"
     critical = "critical"
+
 
 
 class RiskSnapshot(BaseModel):
@@ -43,6 +48,7 @@ class RiskSnapshot(BaseModel):
     risk_level: RiskLevel
     trend: str
     confidence: float
+
 
 class Alert(BaseModel):
     id: UUID
